@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comp Sci Hub - Flag</title>
+    <link rel="icon" type="image/x-icon" href="../images/hub-favicon.png">
+    <link rel="stylesheet" href="../index.css">
+    <script src="../js/toHome.js"></script>
+
+</head>
+    
+<body>
+    <div class="home-btn button2" onclick="toHome();"><img src="../images/houseIcon.png" class="home-btn-img">Home</div>
+    <div class="heading-container">
+        <span class="heading">COMPUTER SCIENCE CLUB</span>
+        <span class="heading" style="font-weight: bold;">INSTALL PYGAME</span>
+    </div>
+
+    <div class="single-body">
+        <div class="body-page">
+            <div>
+                Python launcher and IDE is already installed on school computers. If you are on your school laptop then you skip these two steps:
+                    <ol>
+                    <li>Visit <a href="https://www.python.org/" target="_blank">www.python.org</a> and download the latest version of Python (3.13.0)</li>
+                    <li>Agree to Terms & Conditions and install launcher</li>
+                    </ol>
+                    Go to Self Service, install Anaconda and Visual Studio Code. 
+                    Open VSCode and go to the Extensions tab on the left. Install the Python extension.  
+            </div>
+            <div>
+                Open the terminal by pressing ⌘ + space and typing "terminal" and type:
+                <div class="mid-body"><span>python3 -m pip install -U pygame --user<span></div>
+                Then hit enter. To check if that worked, run:
+                <div class="mid-body"><span>python3 -m pygame.examples.aliens<span></div>
+                (OPTIONAL) If you get a warning to upgrade pip, run:
+                <div class="mid-body"><span>python3 -m pip install --upgrade pip<span></div>
+            </div>
+            <div>Pygame is installed on your computer! To start coding with it, try going to the Pygame tutorials at the CS Hub</div>
+        </div>
+    </div>
+</body>
+
+</html>

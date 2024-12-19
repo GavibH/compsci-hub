@@ -6,12 +6,23 @@
     <link rel="stylesheet" href="index.css">
 
     <script>
+        const realURL = location.origin + "/compsci-hub";
+        const localURL = "file:///Users/g.hicks26/Desktop/CS%20Club/hub";
+
+        function openFile(urlEnd) {
+            if (!realURL.includes("file")) {
+                window.location.href = realURL + urlEnd;
+            } else {
+                window.location.href = localURL + urlEnd;
+            }
+        }
+        
         function itemClick(command) {
             if (command == "pygame install") {
+                openFile("/pages/pygame-install.html");
             }
             if (command == "flag") {
-                //window.location.href = location.origin + "/pages/flag.html";
-                window.location.href = "file:///Users/g.hicks26/Desktop/CS%20Club/hub/pages/flag.html";
+                openFile("/pages/flag.html");
             }
         }
     </script>
@@ -51,12 +62,18 @@
     </div>
 
     <div class="river-body">
-        <div class="river-item button1" onclick="itemClick('pygame install');">
-            How to install Pygame
-        </div>
         <div class="river-item button1" onclick="itemClick('flag');">
             Submit a flag
         </div>
+        <div class="river-item button1" onclick="itemClick('pygame install');">
+            How to install Pygame
+        </div><!--
+        <div class="river-item button1" onclick="itemClick('robocode install');">
+            How to install Robocode
+        </div>
+        <div class="river-item button1" onclick="itemClick('pygame tutorials');">
+            Pygame tutorials
+        </div>-->
     </div>
 </body>
 
