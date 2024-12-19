@@ -1,51 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Comp Sci Hub</title>
-    <link rel="icon" type="image/x-icon" href="images/hub-favicon.png">
-    <link rel="stylesheet" href="index.css">
-
-    <script>
-        function itemClick(command) {
-            if (command == "schoology") {
-                window.location.href = location.origin + "/pages/flag.html";
-                //window.open("https://rih.schoology.com/home", '_blank').focus();
-            }
-        }
-    </script>
     <script type="text/javascript"> 
-        window.onload = fadeIn; 
-          
-        function fadeIn() {
-            var fade = document.getElementById("open-animation"); 
-            var opacity = 1; 
-            var intervalID = setInterval(function() { 
-          
-                if (opacity > 0) { 
-                    opacity = opacity - 0.01 
-                    fade.style.opacity = opacity; 
-                } else { 
-                    clearInterval(intervalID); 
-                    document.getElementById("open-animation").style.display = "none";
-                } 
-            }, 10); 
-        } 
+        window.location.href = "file:///Users/g.hicks26/Desktop/CS%20Club/hub/main.html?a=1";
     </script> 
 
 </head>
     
 <body>
-    <div id="open-animation"></div>
-    <div class="heading-container">
-        <span class="heading">COMPUTER SCIENCE CLUB</span>
-        <span class="heading" style="font-weight: bold;">HUB</span>
-    </div>
-
-    <div class="river-body">
-        <div class="river-item" onclick="itemClick('schoology');">
-            Schoology
-        </div>
-    </div>
 </body>
 
 </html>

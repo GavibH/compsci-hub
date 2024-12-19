@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comp Sci Hub</title>
+    <link rel="icon" type="image/x-icon" href="images/hub-favicon.png">
+    <link rel="stylesheet" href="index.css">
+
+    <script>
+        const realURL = location.origin + "/compsci-hub";
+        const localURL = "file:///Users/g.hicks26/Desktop/CS%20Club/hub";
+
+        function openFile(urlEnd) {
+            if (!realURL.includes("file")) {
+                window.location.href = realURL + urlEnd;
+            } else {
+                window.location.href = localURL + urlEnd;
+            }
+        }
+        
+        function itemClick(command) {
+            if (command == "pygame install") {
+                openFile("/pages/pygame-install.html");
+            }
+            if (command == "flag") {
+                openFile("/pages/flag.html");
+            }
+        }
+    </script>
+    <script type="text/javascript"> 
+        let url = new URL(window.location.href);
+        let params = new URLSearchParams(url.search);
+        window.onload = fadeIn;
+          
+        function fadeIn() {
+            if (params.get("a") != "0") {
+                var fade = document.getElementById("open-animation"); 
+                var opacity = 1; 
+                var intervalID = setInterval(function() { 
+        
+                if (opacity > 0) { 
+                    opacity = opacity - 0.01 
+                    fade.style.opacity = opacity; 
+                } else { 
+                    clearInterval(intervalID); 
+                    document.getElementById("open-animation").style.display = "none";
+                    params.set("a", "0")
+                } 
+                }, 10); 
+            } else {
+                document.getElementById("open-animation").style.display = "none";
+            }
+        } 
+    </script> 
+
+</head>
+    
+<body>
+    <div id="open-animation"></div>
+    <div class="heading-container">
+        <span class="heading">COMPUTER SCIENCE CLUB</span>
+        <span class="heading" style="font-weight: bold;">HUB</span>
+    </div>
+
+    <div class="river-body">
+        <div class="river-item button1" onclick="itemClick('flag');">
+            Submit a flag
+        </div>
+        <div class="river-item button1" onclick="itemClick('pygame install');">
+            How to install Pygame
+        </div><!--
+        <div class="river-item button1" onclick="itemClick('robocode install');">
+            How to install Robocode
+        </div>
+        <div class="river-item button1" onclick="itemClick('pygame tutorials');">
+            Pygame tutorials
+        </div>-->
+    </div>
+</body>
+
+</html>
