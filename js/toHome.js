@@ -1,4 +1,11 @@
+const realURL = location.origin + "/compsci-hub";
+const localURL = "file:///Users/g.hicks26/Desktop/CS%20Club/hub";
+
 function toHome() {
-    window.location.href = "file:///Users/g.hicks26/Desktop/CS%20Club/hub/main.html?a=0";
+    if (!realURL.includes("file")) {
+        window.location.href = realURL + "/main.html?a=0";
+    } else {
+        window.location.href = localURL + "/main.html?a=0";
+    }
     document.getElementById("open-animation").style.display = "none";
 }
