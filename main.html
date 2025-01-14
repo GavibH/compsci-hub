@@ -7,7 +7,7 @@
 
     <script>
         const realURL = location.origin + "/compsci-hub";
-        const localURL = "file:///Users/g.hicks26/Desktop/CS%20Club/hub";
+        const localURL = "file:///Users/g.hicks26/Desktop/CSClub/hub";
 
         function openFile(urlEnd) {
             if (!realURL.includes("file")) {
@@ -18,11 +18,42 @@
         }
         
         function itemClick(command) {
+            if (command == "picoctf") {
+                window.open("https://play.picoctf.org/practice", '_blank').focus();
+            }
+            if (command == "leetcode") {
+                window.open("https://leetcode.com/problemset/", '_blank').focus();
+            }
+            if (command == "robocode wiki") {
+                window.open("https://robowiki.net/wiki/Main_Page", '_blank').focus();
+            }
+
             if (command == "pygame install") {
                 openFile("/pages/pygame-install.html");
             }
             if (command == "flag") {
                 openFile("/pages/flag.html");
+            }
+            if (command == "robocode install") {
+                openFile("/pages/robocode-install.html");
+            }
+            if (command == "pygame tutorials") {
+                openFile("/pages/pygame-tutorials.html");
+            }
+            if (command == "robocode tutorials") {
+                openFile("/pages/robocode-tutorials.html");
+            }
+            if (command == "pygame reference") {
+                window.open("https://canberragpn.github.io/static/doc/PygameCheatSheet.pdf", '_blank').focus();
+            }
+            if (command == "robocode reference") {
+                window.open("https://robocode.sourceforge.io/docs/robocode/robocode/Robot.html", '_blank').focus();
+            }
+            if (command == "points") {
+                openFile("/pages/points.html");
+            }
+            if (command == "make website") {
+                openFile("/pages/make-a-website.html");
             }
         }
     </script>
@@ -61,19 +92,40 @@
         <span class="heading" style="font-weight: bold;">HUB</span>
     </div>
 
+    <div class="head-body">
+        <div class="button3" onclick="itemClick('picoctf')">picoCTF</div>
+        <div class="button3" onclick="itemClick('leetcode')">LeetCode</div>
+        <div class="button3" onclick="itemClick('robocode wiki')">Robocode Wiki</div>
+    </div>
+
     <div class="river-body">
+        <div class="river-item button1" onclick="itemClick('points');">
+            Points standings
+        </div>
         <div class="river-item button1" onclick="itemClick('flag');">
             Submit a flag
         </div>
         <div class="river-item button1" onclick="itemClick('pygame install');">
             How to install Pygame
-        </div><!--
+        </div>
         <div class="river-item button1" onclick="itemClick('robocode install');">
             How to install Robocode
         </div>
         <div class="river-item button1" onclick="itemClick('pygame tutorials');">
             Pygame tutorials
-        </div>-->
+        </div>
+        <div class="river-item button1" onclick="itemClick('robocode tutorials');">
+            Robocode tutorials
+        </div>
+        <div class="river-item button1" onclick="itemClick('pygame reference');">
+            Pygame reference sheet
+        </div>
+        <div class="river-item button1" onclick="itemClick('robocode reference');">
+            Robocode reference sheet
+        </div>
+        <div class="river-item button1" onclick="itemClick('make website');">
+            Make a website
+        </div>
     </div>
 </body>
 

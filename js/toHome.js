@@ -1,5 +1,5 @@
 const realURL = location.origin + "/compsci-hub";
-const localURL = "file:///Users/g.hicks26/Desktop/CS%20Club/hub";
+const localURL = "file:///Users/g.hicks26/Desktop/CSClub/hub";
 
 function toHome() {
     if (!realURL.includes("file")) {
